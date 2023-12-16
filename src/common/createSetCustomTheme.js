@@ -27,7 +27,7 @@ export const createSetCustomTheme = (options) => {
         appendedContent:
           buildCommand === "build" ? "" : "\nexport default setCustomTheme;",
         preAppendedContent:
-          "/**This file created by @pureadmin/theme,you can not modify it.*/\n",
+          "/**This file created by @superadmin/theme,you can not modify it.*/\n",
       })
     }
     return Promise.resolve()

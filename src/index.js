@@ -36,7 +36,7 @@ export const themePreprocessorPlugin = (options = {}) => {
   let config = {
     root: process.cwd(),
   }
-  // @pureadmin/theme 被 require() 时的实际路径
+  // @superadmin/theme 被 require() 时的实际路径
   const targetRsoleved = require
     .resolve(pack.name)
     .replace(/[\\/]dist[\\/]index\.js$/, "")
@@ -79,7 +79,7 @@ export const themePreprocessorPlugin = (options = {}) => {
     "const setCustomTheme=function(options){window._setCustomTheme_=options;}"
 
   return {
-    name: "@pureadmin/theme",
+    name: "@superadmin/theme",
     enforce: "pre",
     api: {
       getOptions() {
@@ -159,8 +159,8 @@ export const themePreprocessorPlugin = (options = {}) => {
 
       const optimizeDeps = conf.optimizeDeps || {}
       optimizeDeps.exclude = [
-        "@pureadmin/theme/dist/browser-utils",
-        "@pureadmin/theme/dist/browser-utils.js",
+        "@superadmin/theme/dist/browser-utils",
+        "@superadmin/theme/dist/browser-utils.js",
       ].concat(
         Array.isArray(optimizeDeps.exclude)
           ? optimizeDeps.exclude
@@ -236,7 +236,7 @@ export const themePreprocessorPlugin = (options = {}) => {
             .slice(0, index)
             .join("/")}/${resolveName}`
           const originalDir = path
-            .resolve("node_modules/.pureAdminTheme/original")
+            .resolve("node_modules/.superAdminTheme/original")
             .replace(/\\/g, "/")
           if (
             !fsExtra.existsSync(resolveDir) &&
@@ -492,7 +492,7 @@ export const themePreprocessorHmrPlugin = () => {
   return {
     // 插件顺序必须post
     enforce: "post",
-    name: "@pureadmin/theme-hmr",
+    name: "@superadmin/theme-hmr",
     config(conf, { command }) {
       buildCommand = command
     },
@@ -502,7 +502,7 @@ export const themePreprocessorHmrPlugin = () => {
     },
     buildStart() {
       // 获取依赖插件提供的 方法
-      const parentName = "@pureadmin/theme"
+      const parentName = "@superadmin/theme"
       const parentPlugin = config.plugins.find(
         (plugin) => plugin.name === parentName
       )

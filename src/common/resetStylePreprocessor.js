@@ -42,7 +42,7 @@ export const resetStylePreprocessor = (options = {}) => {
         })
       }
       const originalPreDir = path
-        .resolve("node_modules/.pureAdminTheme/original", resolveName)
+        .resolve("node_modules/.superadminTheme/original", resolveName)
         .replace(/\\/g, "/")
       if (fsExtra.existsSync(originalPreDir)) {
         const originalFiles = fsExtra.readdirSync(originalPreDir) || []
