@@ -1,6 +1,6 @@
 {
   "name": "super-admin-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "super admin theme plugin for vite",
   "keywords": [
     "@super/theme",
@@ -11,7 +11,6 @@
   "bugs": "https://github.com/zhoubingyan1/super-admin-theme/issues",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build -- -w",
@@ -20,7 +19,6 @@
   },
   "author": "Biu..Biu..Biu",
   "license": "MIT",
-
   "files": [
     "dist"
   ],
