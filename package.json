@@ -1,9 +1,9 @@
 {
-  "name": "super-admin-theme",
+  "name": "@superadmin/theme",
   "version": "1.0.1",
   "description": "super admin theme plugin for vite",
   "keywords": [
-    "@super/theme",
+    "@superadmin/theme",
     "vue-super-admin",
     "vite"
   ],
